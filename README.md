@@ -20,7 +20,7 @@ This is the frontend application for the Persona Generator project. The applicat
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-repo/persona-generator-frontend.git
+git clone git@github.com:Animesh-chaturvedi/persona-featurely-frontend.git
 cd persona-generator-frontend
 ```
 
@@ -34,15 +34,6 @@ npm install
 yarn install
 ```
 
-### 3. Set Up Environment Variables
-
-Create a `.env.local` file in the root directory and configure the API endpoint:
-
-```
-NEXT_PUBLIC_API_BASE_URL=http://15.206.194.28:4000
-```
-
-Replace the `NEXT_PUBLIC_API_BASE_URL` with the actual backend URL if different.
 
 ### 4. Run the Development Server
 
@@ -122,9 +113,6 @@ Verify the `NEXT_PUBLIC_API_BASE_URL` environment variable is correctly set.
 #### 3. Backend Connection Errors
 Check if the backend server is running and accessible.
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Acknowledgements
 
