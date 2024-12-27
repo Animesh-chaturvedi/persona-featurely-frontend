@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Persona Generator Frontend
+
+This is the frontend application for the Persona Generator project. The application is built with **Next.js** and integrates with a backend API to generate structured personas based on user input. It uses **Tailwind CSS** for styling.
+
+## Features
+
+- Input form for role title, LinkedIn profiles, and industry context.
+- Integration with the backend API for persona generation.
+- Dynamic display of persona data with hierarchical structure.
+- Error handling for invalid inputs or server errors.
+- Responsive design using Tailwind CSS.
+
+## Prerequisites
+
+- **Node.js** (v16 or later)
+- **npm** or **yarn**
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-repo/persona-generator-frontend.git
+cd persona-generator-frontend
+```
+
+### 2. Install Dependencies
+
+Install the required packages:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set Up Environment Variables
+
+Create a `.env.local` file in the root directory and configure the API endpoint:
+
+```
+NEXT_PUBLIC_API_BASE_URL=http://15.206.194.28:4000
+```
+
+Replace the `NEXT_PUBLIC_API_BASE_URL` with the actual backend URL if different.
+
+### 4. Run the Development Server
+
+Start the application in development mode:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Input Form
 
-## Learn More
+The input form accepts:
+- **Role Title**: The title of the persona (e.g., `Frontend Developer`).
+- **LinkedIn Profiles**: A comma-separated list of LinkedIn profile URLs.
+- **Industry Context**: The industry or domain for the persona.
 
-To learn more about Next.js, take a look at the following resources:
+### Persona Display
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+After submitting the form, the application sends a request to the backend API and displays the generated persona in a structured format.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API Integration
 
-## Deploy on Vercel
+The frontend communicates with the backend API via the `/api/persona/generate` endpoint. Ensure the backend server is running and accessible.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Example request payload:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```json
+{
+  "roleTitle": "Frontend Developer",
+  "linkedinProfiles": ["https://linkedin.com/in/example1"],
+  "industryContext": "Tech"
+}
+```
+
+## Styling
+
+This project uses **Tailwind CSS** for styling. The global styles are defined in the `styles/globals.css` file. To customize styles, modify the Tailwind configuration or add custom classes in your components.
+
+## Deployment
+
+### Build for Production
+
+Generate a production build:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+### Start the Production Server
+
+Start the application in production mode:
+
+```bash
+npm run start
+# or
+yarn start
+```
+
+## Troubleshooting
+
+### Common Issues
+
+#### 1. CORS Errors
+Ensure the backend server allows requests from the frontend domain. Configure CORS settings in the backend.
+
+#### 2. API Endpoint Issues
+Verify the `NEXT_PUBLIC_API_BASE_URL` environment variable is correctly set.
+
+#### 3. Backend Connection Errors
+Check if the backend server is running and accessible.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)

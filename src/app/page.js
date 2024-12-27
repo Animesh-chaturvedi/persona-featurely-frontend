@@ -3,7 +3,6 @@
 import { useState } from "react";
 import InputField from "../components/InputField";
 import FormButton from "../components/FormButton";
-import Section from "@/components/Section";
 import DisplayText from "@/components/DisplayText";
 
 const PersonaResearch = () => {

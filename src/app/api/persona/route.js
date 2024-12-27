@@ -6,7 +6,7 @@ export async function POST(req) {
         return new Response(JSON.stringify({ error: "Role title is required" }), { status: 400 });
       }
   
-      const response = await fetch("http://localhost:4000/api/persona/generate", {
+      const response = await fetch("http://15.206.194.28:4000/api/persona/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
